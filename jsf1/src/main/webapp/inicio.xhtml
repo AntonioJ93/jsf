@@ -14,12 +14,12 @@
             Nombre:
             <h:inputText value="#{datosPersonalesBean.nombre}" label="#{propiedades.labelNombre}" required="true"></h:inputText>
             <br/>Edad:<h:inputText  value="#{datosPersonalesBean.edad}" label="#{propiedades.labelEdad}" required="true">
-                <f:validator 
+        
             </h:inputText>
-            <br/><h:commandButton value="#{propiedades.botonEnviar}" action="destino">
+                    <br/><h:commandButton value="#{propiedades.botonEnviar}" action="#{datosPersonalesBean.navegar1}">
          
             </h:commandButton>
-            <h:commandButton value="#{propiedades.botonEnviar2}" action="diferente">
+            <h:commandButton value="#{propiedades.botonEnviar2}" action="#{datosPersonalesBean.navegar2}">
                 
             </h:commandButton>
         </h:form>
