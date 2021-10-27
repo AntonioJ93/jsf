@@ -7,7 +7,6 @@ package com.antonio.jsf1;
 
 import javax.inject.Named;
 import javax.enterprise.context.RequestScoped;
-import javax.faces.annotation.ManagedProperty;
 
 /**
  *
@@ -19,22 +18,9 @@ public class DatosPersonalesBean {
 
     private String nombre;
     private Integer edad;
-   
-
-    @ManagedProperty(value = "#{param.pDestino}")
-    private String pDestino;
-
 
     public Integer getEdad() {
         return edad;
-    }
-
-    public String getpDestino() {
-        return pDestino;
-    }
-
-    public void setpDestino(String pDestino) {
-        this.pDestino = pDestino;
     }
 
     public void setEdad(Integer edad) {
@@ -50,10 +36,11 @@ public class DatosPersonalesBean {
     }
 
     public String navegar1(){
-        return "valorDevuelto";
+        return "xxx";
     }
+    
     public String navegar2(){
-        return "valorDevuelto";
+        return "xxx";
     }
     /**
      * Creates a new instance of DatosPersonalesBean

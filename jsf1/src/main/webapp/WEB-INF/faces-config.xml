@@ -35,14 +35,14 @@
     <navigation-rule>
         <from-view-id>inicio.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{datosPersonalesBean.navegar1()}</from-action>
-            <from-outcome>valorDevuelto</from-outcome>
-            <to-view-id>destino</to-view-id>
+            <from-action>#{datosPersonalesBean.navegar1}</from-action>
+          <!--  <from-outcome>xxx</from-outcome> -->
+            <to-view-id>destino.xhtml</to-view-id>
         </navigation-case>
         <navigation-case>
-            <from-action>#{datosPersonalesBean.navegar2()}</from-action>
-            <from-outcome>valorDevuelto</from-outcome>
-            <to-view-id>diferente</to-view-id>
+            <from-action>#{datosPersonalesBean.navegar2}</from-action>
+            <!--<from-outcome>xxx</from-outcome>-->
+            <to-view-id>diferente.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
     
