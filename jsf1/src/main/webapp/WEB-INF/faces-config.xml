@@ -30,6 +30,10 @@
             <base-name>config.cadenas</base-name>
             <var>propiedades</var>
         </resource-bundle>
+        <resource-bundle>
+            <base-name>config.img</base-name>
+            <var>img</var>
+        </resource-bundle>
     </application>
     
     <navigation-rule>
