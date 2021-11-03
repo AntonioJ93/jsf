@@ -5,11 +5,9 @@
  */
 package com.antonio.tarea3_producesfactura_anotaciones.controlador;
 
-import com.antonio.tarea3_producesfactura_anotaciones.modelo.Cliente;
 import com.antonio.tarea3_producesfactura_anotaciones.modelo.Factura;
 import com.antonio.tarea3_producesfactura_anotaciones.modelo.LineaFactura;
 import com.antonio.tarea3_producesfactura_anotaciones.modelo.Producto;
-import javax.annotation.PostConstruct;
 import javax.enterprise.inject.Model;
 import javax.enterprise.inject.New;
 import javax.enterprise.inject.Produces;

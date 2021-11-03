@@ -5,9 +5,6 @@
  */
 package com.antonio.tarea3_producesfactura_anotaciones.modelo;
 
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Named;
-
 /**
  *
  * @author pryet
