@@ -19,6 +19,10 @@ public class Cliente {
     private String nombre;
     private int codigoCliente;
 
+    public static ClienteBuilder builder(String nombre){
+        return new ClienteBuilder(nombre);
+    }
+    
     @PostConstruct
     public void init(){
         nombre="Paco";
@@ -40,5 +44,19 @@ public class Cliente {
     public void setCodigoCliente(int codigoCliente) {
         this.codigoCliente = codigoCliente;
     }
-    
+    public static class ClienteBuilder{
+        private final Cliente cliente;
+        private ClienteBuilder(String nombre) {
+            cliente=new Cliente();
+            cliente.nombre=nombre;
+        }
+        
+        public ClienteBuilder codigo(int codigo){
+            cliente.codigoCliente=codigo;
+            return this;
+        }
+        public Cliente build(){
+            return cliente;
+        }
+    }
 }

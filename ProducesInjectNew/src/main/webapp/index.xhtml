@@ -2,33 +2,46 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
     <h:body>
+        <h:form>
+            <h5>Responsive (PrimeFlex, Basic)</h5>
+            <p:panelGrid columns="4" layout="grid" styleClass="showcase-text-align-center">
+                  
 
-        <h:panelGrid columns="4"  cellpadding = "10" cellspacing = "1" >
-            <h:form>
-                <h:outputLabel value = "Nombre:" />
-                <h:inputText  value="#{factura.cliente.nombre}"/>
-                <h:outputLabel value = "Código cliente:" />
-                <h:inputText  value="#{factura.cliente.codigoCliente}"/>
-                <h:outputLabel value = "Noimbre producto:" />
-                <h:inputText value="#{factura.lineasFactura.get(0).getProducto().getNombre()}"/>
-                <h:outputLabel value = "Noimbre código" />
-                <h:inputText value="#{factura.lineasFactura.get(0).getProducto().getCodigo()}"/>
-            
-                <h:outputLabel value = "Noimbre producto:" />
-                <h:inputText value="#{factura.lineasFactura.get(1).getProducto().getNombre()}"/>
-                <h:outputLabel value = "Noimbre código" />
-                <h:inputText value="#{factura.lineasFactura.get(1).getProducto().getCodigo()}"/>
-                
+                <p:outputLabel for="username1" styleClass="p-d-block">Nombre del cliente</p:outputLabel>
+                <p:inputText id="username1" styleClass="p-d-block"/>
+                <p:outputLabel for="codigo" styleClass="p-d-block">Código del cliente</p:outputLabel>
+                <p:inputText id="codigo" styleClass="p-d-block"/>
+                <p:outputLabel for="xx" styleClass="p-d-block">Nombre del cliente</p:outputLabel>
+                <p:inputText id="xx" styleClass="p-d-block"/>
+            </p:panelGrid>
 
-                <h:commandButton action="mostrar" value="enviar"/>
-            </h:form>
-        </h:panelGrid>
 
+            <div class="card">
+                <h5>Responsive (ColumnClasses)</h5>
+                <p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center"
+                             >
+                    <div class="p-field">
+                    <p:outputLabel for="aaa" styleClass="p-d-block">aaa</p:outputLabel>
+                    <p:inputText id="aaa" styleClass="p-d-block"/>
+                </div>  
+                    <div class="p-field">
+                    <p:outputLabel for="sss" styleClass="p-d-block">aaa</p:outputLabel>
+                    <p:inputText id="sss" styleClass="p-d-block"/>
+                </div>  
+                </p:panelGrid>
+
+
+            </div>
+
+
+
+        </h:form>
     </h:body>
 </html>
 
