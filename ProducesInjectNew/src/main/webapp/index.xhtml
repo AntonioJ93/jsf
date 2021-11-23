@@ -11,7 +11,7 @@
         <h:form>
             <h5>Responsive (PrimeFlex, Basic)</h5>
             <p:panelGrid columns="4" layout="grid" styleClass="showcase-text-align-center">
-                  
+
 
                 <p:outputLabel for="username1" styleClass="p-d-block">Nombre del cliente</p:outputLabel>
                 <p:inputText id="username1" styleClass="p-d-block"/>
@@ -21,26 +21,16 @@
                 <p:inputText id="xx" styleClass="p-d-block"/>
             </p:panelGrid>
 
-
-            <div class="card">
-                <h5>Responsive (ColumnClasses)</h5>
-                <p:panelGrid columns="2" layout="grid" styleClass="showcase-text-align-center"
-                             >
-                    <div class="p-field">
-                    <p:outputLabel for="aaa" styleClass="p-d-block">aaa</p:outputLabel>
-                    <p:inputText id="aaa" styleClass="p-d-block"/>
-                </div>  
-                    <div class="p-field">
-                    <p:outputLabel for="sss" styleClass="p-d-block">aaa</p:outputLabel>
-                    <p:inputText id="sss" styleClass="p-d-block"/>
-                </div>  
-                </p:panelGrid>
-
-
+            <div class="ui-fluid p-formgrid p-grid">
+                <div class="p-field p-col">
+                    <label for="firstname">Firstname</label>
+                    <p:inputText id="firstname" type="text" />
+                </div>
+                <div class="p-field p-col">
+                    <label for="lastname">Lastname</label>
+                    <p:inputText id="lastname" type="text" />
+                </div>
             </div>
-
-
-
         </h:form>
     </h:body>
 </html>

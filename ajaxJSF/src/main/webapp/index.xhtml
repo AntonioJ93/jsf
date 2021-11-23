@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h:form id="form">
+            <h3>Introduce tu nombre</h3>
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td>
+                        <h:inputText value="#{personaBean.nombre}">
+                            <f:ajax event="keyup" render="zona msjError confirm boton" listener="#{personaBean.validar}"/>
+                        </h:inputText>
+                    </td>
+                    <td>Apellido:</td>
+                    <td>
+                        <h:inputText id="confirm" value="#{personaBean.apellido}" disabled="#{personaBean.disabled()}">
+                            <f:ajax event="keyup" render="zona2 msjError boton" listener="#{personaBean.validar}"/>
+                        </h:inputText>
+                    </td>
+                </tr>
+            </table>
+            <h:outputText id="zona" value="Nombre: #{personaBean.nombre}"/>
+            <h:outputText id="zona2" value=" Apellido: #{personaBean.apellido}"/>
+            <h:commandButton id="boton" type="submit" value="Enviar" disabled="#{personaBean.disabledBoton()}"/>
+        </h:form>
+
+
+       
+        <h:outputText id = "msjError"
+                          value = "#{personaBean.msjError != null ?
+                                     personaBean.msjError : ''}"
+                          />
+    </h:body>
+</html>
+

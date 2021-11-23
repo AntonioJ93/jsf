@@ -14,7 +14,7 @@
                     <p>Código: cliente: #{factura.cliente.codigoCliente}</p>
                 </p:outputPanel>
                 <p:dataTable var="linea" value="#{factura.lineasFactura}">
-                    <p:column headerText="Noimbre producto">
+                    <p:column width="100px" headerText="Noimbre producto">
                         <h:outputText value="#{linea.getProducto().getNombre()}" />
                     </p:column>
                     <p:column headerText="Código Producto">
