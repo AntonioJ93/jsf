@@ -1,4 +1,4 @@
-# Project com.midominio/prueba
+# Project com.midominio/mavenproject1
 
 Steps to run this project:
 
